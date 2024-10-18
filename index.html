@@ -6,13 +6,45 @@
      margin: 0;
      font-family: Arial, sans-serif;
    }
+.menu {
+    list-style: none; /* Забрати маркери списку */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Вирівнюємо елементи меню в рядок */
+}
+
+.menu li {
+    margin-right: 15px; /* Відступ між елементами меню */
+}
+
+.menu a {
+    text-decoration: none; /* Прибираємо підкреслення */
+    padding: 10px 15px; /* Внутрішні відступи всередині посилань */
+    background-color: lightgray; /* Початковий колір фону */
+    color: black; /* Початковий колір тексту */
+    border-radius: 5px; /* Невеликий заокруглений кут */
+    transition: background-color 0.3s ease; /* Плавна зміна кольору */
+}
+
+/* При наведенні миші */
+.menu a:hover {
+    background-color: purple; /* Зміна кольору фону при наведенні */
+}
+
+/* При натисканні */
+.menu a:active {
+    background-color: darkblue; /* Зміна кольору фону при натисканні */
+    color: white; /* Зміна кольору тексту при натисканні */
+}
    .container {
      display: flex;
      flex-direction: column;
-     min-height: 100vh;
+     height: 100vh;
    }
    header {
-     background-color: lightblue;
+     background-color: black;
+     display: flex;
+     flex-direction: column;
      padding: 20px;
      text-align: center;
    }
@@ -39,13 +71,23 @@
 </head>
  <body>
   <div class="container">
-   <header>
-    <nav>
-     <ul>
-      <li><a href="index.html">На головну</a></li>
-      <li><a href="OldV.html">Стара версія сайту(2Лаб)</a></li>
-      <li><a href="links.html"></a></li>
-     </ul>
+   <header class="menu">
+    <nav style="display: flex;">
+      <div style="flex-grow: 1;">
+       <ul>
+        <li style="list-style-type: none"><a href="index.html">На головну</a></li>
+       </ul>
+      </div>
+      <div style="flex-grow: 1;">
+       <ul>
+        <li style="list-style-type: none"><a href="OldV.html">Стара версія сайту(2Лаб)</a></li>
+       </ul>
+      </div>
+      <div style="flex-grow: 1;">
+       <ul>
+        <li style="list-style-type: none"><a href="links.html">Ungala Bungala</a></li>
+       </ul>
+      </div>
     </nav>
    </header>
    <div class="main-content">
